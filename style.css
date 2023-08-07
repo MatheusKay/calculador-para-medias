@@ -1,0 +1,289 @@
+/*Main CSS/ Css do Formulario 1*/
+
+.home-aluno {
+    height: 100%;
+    width: 75%;
+    margin: 36px auto;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 32px;
+}
+
+.home-aluno__foto {
+    height: 200px;
+    margin-bottom: 52px;
+}
+
+.home-aluno__nome__container {
+    width: 35%;
+    margin: 0 auto 52px;
+}
+
+.home-aluno__nome {
+    width: 100%;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.home-aluno__container {
+    width: 60%;
+    margin: 0 auto; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 5%;
+}
+
+.home-aluno__atividade {
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+.home-aluno__notas {
+    width: 50%;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.home-aluno__button__container {
+    display: flex;
+    justify-content: end;
+    margin-top: 10%;
+}
+
+.home-aluno__button {
+    padding: 16px 8px;
+    margin-right: 16px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/*Main CSS/ Css do Formulario 2*/
+
+.home-materias {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.home-materias__text {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.home-materias__container {
+    width: 34%;
+    margin: 24px auto;
+}
+
+.home-materias__quantidade {
+    width: 100px;
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 24px;
+    text-align: center;
+}
+
+.home-materias__button {
+    margin-left: 16px;
+    padding: 13px 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+/*Main CSS/ Css da tabela*/
+
+#tabela_de_medias {
+    width: 75%;
+    margin: 24px auto;
+    border-collapse: collapse;
+}
+
+.tabela_de_informacoes__colunas {
+    padding: 32px;
+    font-size: 1.1em;
+    font-family: sans-serif;
+    font-weight: bolder;
+    border: none;
+}
+
+.tabela_de_alunos__linhas {
+    background-color: #ccc;
+}
+
+.tabela_de_alunos__colunas {
+    max-width: 459px;
+    padding: 32px;
+    font-size: 1em;
+    border: none;
+    word-break: break-word;
+}
+
+/*Main CSS/ Ativos*/
+
+.nota_aluno {
+    display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.tabela_de_alunos__colunas-is--aprovado {
+    padding: 10px;
+    background-color: lawngreen;
+    border-radius: 36px;
+}
+
+.tabela_de_alunos__colunas-is--reprovado {
+    padding: 10px;
+    background-color: red;
+    border-radius: 36px;
+}
+
+/*Main CSS/ Substituição do Css do bootstrap*/
+
+.nav_das_tabelas {
+    width: 85%;
+    margin: 0 auto;
+    font-size: 1.2em;
+}
+
+.nav_link_reprovados,
+.nav_link_aprovados {
+    color: black;
+}
+
+.nav-tabs .nav-link.active.nav_link_aprovados.active,
+.nav_link_aprovados:hover {
+    color: lawngreen;
+}
+
+.nav-tabs .nav-link.active.nav_link_reprovados.active,
+.nav_link_reprovados:hover {
+    color: red;
+}
+
+/*Resposividade do site - Mobile*/
+
+@media screen and (max-width: 767px) {
+    
+    /*Primeira parte do Site*/
+    
+    #form2 {
+        width: 80%;
+        text-align: center;
+    }
+
+    .home-materias__button {
+        margin-left: 0;
+        margin-top: 25%;
+    }
+
+    /*Segunda parte do Site*/
+
+    .home-aluno {
+        width: 90%;
+        margin-top: 5%;
+    }
+
+    .home-aluno__nome__container {
+        width: 100%;
+    }
+
+    .home-aluno__container {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .home-aluno__notas {
+        width: 30%;
+        font-size: 1.7em;
+        margin: 0 0 6%;
+    }
+
+    .home-aluno__button {
+        margin-right: 8px;
+    }
+
+    /*Tabela*/
+
+    .tabela_de_alunos__colunas {
+        padding: 16px;
+        word-break: break-word;
+    }
+
+    .tabela_de_alunos__colunas-is--reprovado {
+        word-break: normal;
+    }
+
+    .nav_das_tabelas {
+        margin: 7% 0 0;
+    }
+}
+
+/*Resposividade do site - Tablet*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+    /*Primeira parte do Site*/
+    
+    #form2 {
+        width: 80%;
+        text-align: center;
+    }
+
+    /*Segunda parte do Site*/
+
+    .home-aluno {
+        margin-top: 5%;
+    }
+
+    .home-aluno__nome__container {
+        width: 60%;
+    }    
+
+    .home-aluno__container {
+        width: 95%;
+    }
+
+    .home-aluno__button__container {
+        margin-top: 20%;
+    }
+
+    /*Tabela do site*/
+
+    #tabela_de_medias {
+        width: 85%;
+    }
+
+    .tabela_de_alunos__colunas {
+        max-width: 227px;
+        word-break: break-word;
+    }
+}

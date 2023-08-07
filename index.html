@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliador para alunos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <section id="home-alunos" class="home-aluno nota_aluno">
+            <img class="home-aluno__foto" src="https://img.myloview.com.br/posters/icone-de-alunos-elemento-da-escola-para-o-conceito-movel-e-icone-de-aplicativos-da-web-icone-de-linha-fina-com-sombra-no-cracha-para-design-de-site-e-desenvolvimento-desenvolvimento-de-aplicativos-700-136981341.jpg" alt="">
+            <form id="form">
+                <div class="home-aluno__nome__container">
+                    <input class="home-aluno__nome nota_aluno" placeholder="Nome e Sobrenome" type="text" id="nome_do_aluno">
+                </div>
+                <div class="home-aluno__container">
+                    <label class="nota_aluno home-aluno__atividade" id="atividade1">Atividade 1:</label>
+                    <input class="home-aluno__notas nota_aluno" type="number" id="nota_do_aluno1">
+                    
+                    <label class="nota_aluno home-aluno__atividade" id="atividade2">Atividade 2:</label>
+                    <input class="home-aluno__notas nota_aluno" type="number" id="nota_do_aluno2">
+                    
+                    <label class="nota_aluno home-aluno__atividade" id="atividade3">Atividade 3:</label>
+                    <input class="home-aluno__notas nota_aluno" type="number" id="nota_do_aluno3">
+                    
+                    <label class="nota_aluno home-aluno__atividade" id="atividade4">Atividade 4:</label>
+                    <input class="home-aluno__notas nota_aluno" type="number" id="nota_do_aluno4">
+                    
+                    <label class="nota_aluno home-aluno__atividade" id="atividade5">Atividade 5:</label>
+                    <input class="home-aluno__notas nota_aluno" type="number" id="nota_do_aluno5">
+                    
+                    <label class="nota_aluno home-aluno__atividade" id="atividade6">Atividade 6:</label>
+                    <input class="home-aluno__notas nota_aluno" type="number" id="nota_do_aluno6">
+                    
+                    <label class="nota_aluno home-aluno__atividade" id="atividade7">Atividade 7:</label>
+                    <input class="home-aluno__notas nota_aluno" type="number" id="nota_do_aluno7">
+                    
+                    <label class="nota_aluno home-aluno__atividade" id="atividade8">Atividade 8:</label>
+                    <input class="home-aluno__notas nota_aluno" type="number" id="nota_do_aluno8">
+                    
+                    <label class="nota_aluno home-aluno__atividade" id="atividade9">Atividade 9:</label>
+                    <input class="home-aluno__notas nota_aluno" type="number" id="nota_do_aluno9">
+                    
+                    <label class="nota_aluno home-aluno__atividade" id="atividade10">Atividade 10:</label>
+                    <input class="home-aluno__notas nota_aluno" type="number" id="nota_do_aluno10">
+                </div>
+        
+                <div class="home-aluno__button__container">
+                    <button class="home-aluno__button btn btn-secondary" type="reset">Cancelar</button>
+                    <button class="home-aluno__button btn btn-primary" type="submit" id="button_nota_aluno">Calcular</button>
+                </div>
+            </form>
+        </section>
+        <section class="home-materias " id="home-materia">
+            <form id="form2">
+                <label class="home-materias__text">Por favor, informe o número de atividades realizadas neste bimestre/semestre. (Limite de 10 atividades)</label>
+                <div class="home-materias__container">
+                    <input class="home-materias__quantidade" type="number" id="quantidade_materias">
+                    <button class="home-materias__button" type="submit" id="buttons_quantidade_materias">Entrar</button>
+                </div>
+            </form>
+        </section>
+        <section class="nota_aluno" id="seção_da_tabela">
+            <div class="row">
+                <nav class="nav_das_tabelas mt-md-5 mb-md-3">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link nav_link_aprovados active" data-bs-toggle="tab" data-bs-target="#aprovados" href="#">Aprovados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav_link_reprovados nav-link" data-bs-toggle="tab" data-bs-target="#reprovados" href="#">Reprovados</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row">
+                <div class="tab-content">
+                    <div class="tab-pane active nota_aluno" id="aprovados">
+                        <table id="tabela_de_medias">
+                            <thead>
+                                <tr>
+                                    <th class="tabela_de_informacoes__colunas">
+                                        Nome
+                                    </th>
+                                    <th class="tabela_de_informacoes__colunas">
+                                        Media
+                                    </th>
+                                    <th class="tabela_de_informacoes__colunas">
+                                        Estado Final
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="tabela_dos_alunos" id="tabela_de_aprovados">
+                                
+                                
+                                
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane nota_aluno" id="reprovados">
+                        <table id="tabela_de_medias">
+                            <thead>
+                                <tr>
+                                    <th class="tabela_de_informacoes__colunas">
+                                        Nome
+                                    </th>
+                                    <th class="tabela_de_informacoes__colunas">
+                                        Media
+                                    </th>
+                                    <th class="tabela_de_informacoes__colunas">
+                                        Estado Final
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="tabela_dos_alunos" id="tabela_reprovados">
+                                
+                                
+                                
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
