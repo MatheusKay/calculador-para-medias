@@ -1,11 +1,19 @@
 {
+  "name": "ebac_medias",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "babel src -d public"
+    "build": "parcel build src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "browserslist": "> 0.25%",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.22.10",
     "@babel/core": "^7.22.10",
-    "@babel/preset-env": "^7.22.10"
+    "@babel/preset-env": "^7.22.10",
+    "parcel-bundler": "^1.12.5"
   }
 }
