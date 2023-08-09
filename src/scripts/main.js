@@ -125,9 +125,6 @@ function somaDaMedia(numeroDeNotas ,...numeros) {
     return divisaoMedia
 }
 
-const alunosAprovadosSet = new Set();
-const alunosReprovadosSet = new Set();
-
 let linhas = '';
 
 
@@ -166,53 +163,32 @@ function atualizaTabela() {
     const tabelaReprovados = document.getElementById('tabela_reprovados')
     console.log(tabelaReprovados)
     
-    const alunosGeral = linhas.split('</tr>')
+    const alunosGeral = new Set(linhas.split('</tr>'))
     console.log(alunosGeral)
 
-    //Loop para adicionar os alunas em seus arrays especificos
+    const alunosAprovadosFiltro = Array.from(alunosGeral).filter(aluno => aluno.includes('Aprovado'))
+    console.log(alunosAprovadosFiltro)
 
-    for (let j = 0; j < alunosGeral.length - 1; j++) {
-
-        const alunoAtual = alunosGeral[j] + '</tr>'
-
-        if (alunoAtual.includes('Aprovado')) {
-            
-            alunosAprovadosSet.add(alunoAtual);
-            console.log(alunosAprovadosSet)
-            
-        } else if (alunoAtual.includes('Reprovado')) {
-            
-            alunosReprovadosSet.add(alunoAtual);
-            
-        }
-
-    }
-    
-    //Conversão de Set() para um array.
-
-    const alunosAprovados = [...alunosAprovadosSet]
-    console.log(alunosAprovados)
-
-    const alunosReprovados = [...alunosReprovadosSet]
-    console.log(alunosReprovados)
+    const alunosReprovadosFiltro = Array.from(alunosGeral).filter(aluno => aluno.includes('Reprovado'))
+    console.log(alunosReprovadosFiltro)
 
     //Loop para adicionar um novo item a tabela
 
-    for (let m = 0; m < alunosAprovados.length; m++) {
+    for (let m = 0; m < alunosAprovadosFiltro.length; m++) {
 
-        tabelaAprovados.innerHTML = alunosAprovados[m]
+        tabelaAprovados.innerHTML = alunosAprovadosFiltro[m]
 
     }
 
-    for (let n = 0; n < alunosReprovados.length; n++) {
+    for (let n = 0; n < alunosReprovadosFiltro.length; n++) {
 
-        tabelaReprovados.innerHTML = alunosReprovados[n]
+        tabelaReprovados.innerHTML = alunosReprovadosFiltro[n]
 
     }
 
     //Auxiliando a criar uma nova linha na tabela.
 
-    tabelaAprovados.innerHTML = alunosAprovados.join("");
-    tabelaReprovados.innerHTML = alunosReprovados.join("");
+    tabelaAprovados.innerHTML = alunosAprovadosFiltro.join("");
+    tabelaReprovados.innerHTML = alunosReprovadosFiltro.join("");
     
 }
